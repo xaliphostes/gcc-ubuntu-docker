@@ -1,11 +1,16 @@
+# Install gcc/g++ using docker
+ Install gcc/g++ using docker in order to automatize the compilation process: c++ lib + python binding.
+
+ Here, only the ubuntu image + the necessary tools (compiler, git, cmake, python and emacs) are installed. 
+
 ## Create the docker image
-The image (running ubuntu) will all all the necessary tools to compile C++.
+The image (running ubuntu) have all the necessary tools to compile C++.
 ```sh
 docker build -t dev-environment .
 ```
 
 ## Run the container using the generated docker image
-From thsi folder :
+From this folder :
 ```sh
 docker run -it \
     -v emacs-config:/root/.emacs.d \
@@ -18,5 +23,5 @@ or use the script:
 source launch.sh
 ```
 
-## Doing it manually or more info on docker ?
-Read this [readme](./README-other.md)
+## More info on docker with some comments ?
+Read this [readme](./README-other.md) file.
